@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{
+	int x,y,z;
+	scanf("%d",&x);
+	scanf("%d",&y);
+	scanf("%d",&z);
+	
+	int a,b,c;
+	if(x<=y&&y<=z) {a = x;	b = y;	c = z;}
+	else if(x<=z&&z<=y) {a = x;	b = z;	c = y;}
+	else if(y<=x&&x<=z) {a = y;	b = x;	c = z;}
+	else if(y<=z&&z<=x) {a = y;	b = z;	c = x;}
+	else if(z<=y&&y<=x) {a = z;	b = y;	c = x;}
+	else if(z<=x&&x<=y) {a = z;	b = x;	c = y;}
+	
+	char m,n,o;
+	m = getche();
+	n = getche();
+	o = getche();
+	
+	printf("\nOutput : ");
+	if(m == 'A') {printf("%d ",a);}
+	else if (m == 'B') {printf("%d ",b);}
+	else if (m == 'C') {printf("%d ",c);}
+	if(n =='A') {printf("%d ",a);}
+	else if (n == 'B') {printf("%d ",b);}
+	else if (n == 'C') {printf("%d ",c);}
+	if(o =='A') {printf("%d ",a);}
+	else if (o == 'B') {printf("%d ",b);}
+	else if (o == 'C') {printf("%d ",c);}
+	
+	
+	return 0;
+}
