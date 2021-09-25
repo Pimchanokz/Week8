@@ -1,0 +1,49 @@
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{
+	int a = 3;
+    int z[a];
+    int i, x;
+     
+    for(i=0; i<3; i++)
+    {
+        scanf("%d", &z[i]);
+    }
+    
+    i = 0;
+    while (i<a)
+    {
+    	if(i < a-1 && z[i] > z[i+1])
+        {
+            x = z[i+1];
+            z[i+1] = z[i];
+            z[i] = x;
+            i = 0;
+        }
+        else
+        {
+            i++;
+        }
+	}
+	
+	char m,n,o;
+	m = getche();
+	n = getche();
+	o = getche();
+	
+	printf("\nOutput : ");
+	if(m == 'A') {printf("%d ",z[0]);}
+	else if (m == 'B') {printf("%d ",z[1]);}
+	else if (m == 'C') {printf("%d ",z[2]);}
+	if(n =='A') {printf("%d ",z[0]);}
+	else if (n == 'B') {printf("%d ",z[1]);}
+	else if (n == 'C') {printf("%d ",z[2]);}
+	if(o =='A') {printf("%d ",z[0]);}
+	else if (o == 'B') {printf("%d ",z[1]);}
+	else if (o == 'C') {printf("%d ",z[2]);}
+	
+
+	return 0;
+}
